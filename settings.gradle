@@ -1,1 +1,1 @@
-include ':view'
+include ':oriented-image-view'
