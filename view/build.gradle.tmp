@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+ext {
+    bintrayRepo = 'OrientedImageView' // your repo name
+    bintrayName = 'oriented-image-view' // has to be same as your library module name
+    publishedGroupId = 'com.litedevs' // your module package name
+    libraryName = 'oriented-image-view'
+    artifact = 'oriented-image-view' // has to be same as your library module name
+    libraryDescription = 'ImageView with aspect ratio and orientation'
+    siteUrl = 'https://github.com/imrhk/OrientedImageView'
+    gitUrl = 'https://github.com/imrhk/OrientedImageView.git'
+    libraryVersion = '1.0'
+    developerId = 'imrhk'
+    developerName = 'Rahul Kumar'
+    developerEmail = 'rahul@litedevs.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+dependencies {
+    api 'com.android.support:appcompat-v7:27.1.1'
+}
+
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'
